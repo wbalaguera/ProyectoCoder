@@ -55,7 +55,7 @@ ROOT_URLCONF = "ProyectoCoder.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": ['/Users/user/Documents/Documentos - MacBook Pro de user/clase python/Clase Coderhouse/proy3/ProyectoCoder/CarpetaGit/ProyectoCoder/Appcoder/Template/Appcoder/'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
