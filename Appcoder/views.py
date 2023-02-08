@@ -9,13 +9,18 @@ from Appcoder.models import Curso
     #return HttpResponse(doctexto)#
 
 def inicio(request):
-    return HttpResponse('Vista Inicio')
+    return render(request,'Template/Appcoder/inicio.html')
+    #return HttpResponse('Vista Inicio')
 
-def curso(request):
-    return HttpResponse('Vista Cursos')
+def cursos(request):
+    return render(request,'Appcoder/cursos.html')
+    #return HttpResponse('Vista Cursos')
 def profesores(request):
-    return HttpResponse('Vista profesores')   
+    return render(request,'Appcoder/profesores.html')
+    #return HttpResponse('Vista profesores')   
 def entregables(request):
-    return HttpResponse('Vista entregables') 
+    return render(request,'Appcoder/entregables.html')
+    #return HttpResponse('Vista entregables') 
 def estudiantes(request):
-    return HttpResponse('Vista estudiantes  ')    
+    return render(request,'Appcoder/estudiantes.html')
+    #return HttpResponse('Vista estudiantes  ')    
