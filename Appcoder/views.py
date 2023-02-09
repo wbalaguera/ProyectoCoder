@@ -7,8 +7,8 @@ def inicio(request):
     #return HttpResponse('Vista Inicio')
 
 def cursos(request): 
-    #return render(request,'Appcoder/cursos.html')
-    return HttpResponse('Vista Cursos')
+    return render(request,'Appcoder/cursos.html')
+    #return HttpResponse('Vista Cursos',name="Cursos")
 def profesores(request):
     return render(request,'Appcoder\profesores.html')
     #return HttpResponse('Vista profesores')   
