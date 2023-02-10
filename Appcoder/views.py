@@ -18,3 +18,15 @@ def entregables(request):
 def estudiantes(request):
     return render(request,'Appcoder/estudiantes.html')
     #return HttpResponse('Vista estudiantes  ')    
+def cursoFormulario(request):
+    if request.method == 'POST':
+        miformulario= cursoFormulario(request.POST) #AQUI LLEGA TODA LA INFO DE L HTM
+        print (miformulario)
+        if miformulario.is_valid:
+            informacion=miformulario.cleaned_data
+            curso=Curso(nombre=informacion['curso'],camada=informacion ['camada'])
+            curso.save()
+        return render (request,"Appcoder/inicio.html")
+    else:
+        miformulario=cursoFormulario() #formulario vacio para construir el htm    
+    return render(request,"Appcoder/cursoFormulario.html" ,   {"miFormulario":miformulario}      )    
